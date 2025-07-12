@@ -57,7 +57,7 @@ export default function Index() {
 
   // Floating currency symbols
   useEffect(() => {
-    const symbols = ["₦", "💳", "📱", "💰", "🏦"];
+    const symbols = ["₦", "💳", "���", "💰", "🏦"];
     const interval = setInterval(() => {
       const newSymbol = {
         id: Date.now(),
@@ -222,7 +222,10 @@ export default function Index() {
                 </div>
 
                 <div className="space-y-2">
-                  <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight">
+                  <h1
+                    className="text-5xl sm:text-6xl font-bold leading-tight"
+                    style={{ fontSize: "64px" }}
+                  >
                     <div
                       className={`text-foreground ${typewriterStage >= 1 ? "typewriter" : "opacity-0"}`}
                     >
