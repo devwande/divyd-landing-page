@@ -234,8 +234,8 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="group bg-surface-card rounded-3xl p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                🚗
+              <div className="w-20 h-20 bg-gradient-to-br from-warning to-error rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                <Car className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">
                 You paid for Uber again. No one sends you back.
@@ -254,8 +254,8 @@ export default function Index() {
 
             {/* Card 2 */}
             <div className="group bg-surface-card rounded-3xl p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                🍕
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-success rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                <UtensilsCrossed className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">
                 Dinner was ₦18k. Everyone's suddenly offline.
@@ -274,8 +274,8 @@ export default function Index() {
 
             {/* Card 3 */}
             <div className="group bg-surface-card rounded-3xl p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                🎶
+              <div className="w-20 h-20 bg-gradient-to-br from-info to-primary rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                <Play className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">
                 You pay for Netflix — they all stream and vanish.
