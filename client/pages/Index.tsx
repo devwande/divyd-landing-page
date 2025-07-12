@@ -63,7 +63,7 @@ export default function Index() {
                   <br />
                   <span className="text-spot-green">Get paid.</span>
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg sm:text-xl leading-relaxed">
                   Track who owes what, set deadlines, and get your money —
                   without awkward chats.
                 </p>
