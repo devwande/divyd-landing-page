@@ -46,7 +46,11 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="pt-20 pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8">
+      <section
+        id="hero"
+        className="pt-20 pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8"
+        style={{ backgroundColor: "rgba(133, 15, 15, 1)" }}
+      >
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Hero Content */}
@@ -86,7 +90,10 @@ export default function Index() {
             {/* Phone Mockup */}
             <div className="relative">
               <div className="relative mx-auto w-64 h-96 lg:w-80 lg:h-[500px]">
-                <div className="absolute inset-0 bg-gradient-to-br from-charcoal to-gray-800 rounded-[3rem] shadow-2xl">
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-charcoal to-gray-800 rounded-[3rem] shadow-2xl"
+                  style={{ top: "5px", width: "344px" }}
+                >
                   <div className="absolute inset-3 bg-white rounded-[2.5rem] overflow-hidden">
                     <div className="h-full bg-gradient-to-b from-gray-50 to-gray-100 p-6 flex flex-col">
                       <div className="flex items-center justify-between mb-6">
@@ -141,7 +148,8 @@ export default function Index() {
       {/* Pain Points Section */}
       <section
         id="pain-points"
-        className="py-16 lg:py-24 bg-gray-50 px-4 sm:px-6 lg:px-8"
+        className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8"
+        style={{ backgroundColor: "rgba(133, 15, 15, 1)" }}
       >
         <div className="container mx-auto">
           <div className="text-center mb-16">
