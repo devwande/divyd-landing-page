@@ -26,13 +26,16 @@ export default function Terms() {
       </nav>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div
+        className="container mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        style={{ backgroundColor: "rgba(133, 15, 15, 1)" }}
+      >
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-charcoal mb-8">
             Terms of Service
           </h1>
           <div className="prose prose-lg">
-            <p className="text-gray-600">
+            <p className="">
               Terms of Service content will be available when Spot launches.
               We're currently in development and will update this page with our
               complete terms before public release.
