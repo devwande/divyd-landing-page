@@ -93,32 +93,6 @@ export default function Index() {
                 </p>
               </div>
 
-              {/* Stats */}
-              <div className="flex items-center space-x-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">
-                    1000+
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    Waitlist Users
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">
-                    ₦500M+
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    Expected Volume
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">4.9★</div>
-                  <div className="text-sm text-muted-foreground">
-                    Pre-launch Rating
-                  </div>
-                </div>
-              </div>
-
               {/* Tally Form Embed */}
               <div className="glass-effect rounded-3xl p-8 border border-white/10">
                 <h3 className="text-xl font-bold text-foreground mb-6 flex items-center">
