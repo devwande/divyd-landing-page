@@ -222,7 +222,7 @@ export default function Index() {
                 </div>
 
                 <div className="space-y-2">
-                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+                  <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight">
                     <div
                       className={`text-foreground ${typewriterStage >= 1 ? "typewriter" : "opacity-0"}`}
                     >
