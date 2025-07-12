@@ -12,6 +12,9 @@ import {
   Zap,
   Shield,
   Sparkles,
+  Car,
+  UtensilsCrossed,
+  Play,
 } from "lucide-react";
 
 export default function Index() {
