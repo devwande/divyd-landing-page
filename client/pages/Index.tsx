@@ -182,7 +182,7 @@ export default function Index() {
 
                       {/* Transaction Cards */}
                       <div className="space-y-3 lg:space-y-4">
-                        <div className="bg-surface-elevated rounded-2xl lg:rounded-3xl p-3 lg:p-5 border border-white/10 hover:border-primary/30 transition-colors">
+                        <div className="bg-surface-elevated rounded-2xl lg:rounded-3xl p-3 lg:p-5 border border-black/10 hover:border-primary/30 transition-colors">
                           <div className="flex items-center justify-between mb-2 lg:mb-3">
                             <div className="text-xs lg:text-sm text-muted-foreground">
                               Uber to VI
@@ -197,7 +197,7 @@ export default function Index() {
                           </div>
                         </div>
 
-                        <div className="bg-surface-elevated rounded-2xl lg:rounded-3xl p-3 lg:p-5 border border-white/10 hover:border-primary/30 transition-colors">
+                        <div className="bg-surface-elevated rounded-2xl lg:rounded-3xl p-3 lg:p-5 border border-black/10 hover:border-primary/30 transition-colors">
                           <div className="flex items-center justify-between mb-2 lg:mb-3">
                             <div className="text-xs lg:text-sm text-muted-foreground">
                               Dinner at Terra
@@ -212,7 +212,7 @@ export default function Index() {
                           </div>
                         </div>
 
-                        <div className="bg-surface-elevated rounded-2xl lg:rounded-3xl p-3 lg:p-5 border border-white/10 hover:border-primary/30 transition-colors">
+                        <div className="bg-surface-elevated rounded-2xl lg:rounded-3xl p-3 lg:p-5 border border-black/10 hover:border-primary/30 transition-colors">
                           <div className="flex items-center justify-between mb-2 lg:mb-3">
                             <div className="text-xs lg:text-sm text-muted-foreground">
                               Netflix Subscription
@@ -252,7 +252,7 @@ export default function Index() {
 
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-white/10 backdrop-blur-sm mb-4 lg:mb-6">
+            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-black/10 backdrop-blur-sm mb-4 lg:mb-6">
               <span className="text-xs sm:text-sm font-medium text-muted-foreground">
                 Real problems, real solutions 🇳🇬
               </span>
@@ -268,7 +268,7 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Card 1 */}
-            <div className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-warning to-error rounded-2xl lg:rounded-3xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 <Car className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
               </div>
@@ -288,7 +288,7 @@ export default function Index() {
             </div>
 
             {/* Card 2 */}
-            <div className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-primary to-success rounded-2xl lg:rounded-3xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 <UtensilsCrossed className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
               </div>
@@ -308,7 +308,7 @@ export default function Index() {
             </div>
 
             {/* Card 3 */}
-            <div className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl md:col-span-2 lg:col-span-1">
+            <div className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl md:col-span-2 lg:col-span-1">
               <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-info to-primary rounded-2xl lg:rounded-3xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 <Play className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
               </div>
@@ -337,7 +337,7 @@ export default function Index() {
       >
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-white/10 backdrop-blur-sm mb-4 lg:mb-6">
+            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-black/10 backdrop-blur-sm mb-4 lg:mb-6">
               <span className="text-xs sm:text-sm font-medium text-muted-foreground">
                 Simple as 1, 2, 3 🇳🇬
               </span>
@@ -419,7 +419,7 @@ export default function Index() {
       >
         <div className="container mx-auto">
           <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface rounded-full border border-white/10 backdrop-blur-sm mb-4 lg:mb-6">
+            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface rounded-full border border-black/10 backdrop-blur-sm mb-4 lg:mb-6">
               <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-2" />
               <span className="text-xs sm:text-sm font-medium text-muted-foreground">
                 Built for modern Nigerians 🇳🇬
@@ -469,7 +469,7 @@ export default function Index() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-105"
+                className="group bg-surface-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 hover:border-primary/30 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-start space-x-3 lg:space-x-4">
                   <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-primary rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -497,7 +497,7 @@ export default function Index() {
       >
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-white/10 backdrop-blur-sm mb-4 lg:mb-6">
+            <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-black/10 backdrop-blur-sm mb-4 lg:mb-6">
               <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-2" />
               <span className="text-xs sm:text-sm font-medium text-muted-foreground">
                 Launch coming soon 🇳🇬
@@ -515,7 +515,7 @@ export default function Index() {
             </p>
 
             {/* Tally Form Embed */}
-            <div className="max-w-2xl mx-auto glass-effect rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/10 mb-8 lg:mb-12 hover:scale-105 transition-transform duration-500">
+            <div className="max-w-2xl mx-auto glass-effect rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 mb-8 lg:mb-12 hover:scale-105 transition-transform duration-500">
               <iframe
                 src="https://tally.so/embed/m5d9zJ?hideTitle=1&transparentBackground=1"
                 width="100%"
@@ -575,13 +575,13 @@ export default function Index() {
             <div className="flex items-center space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 lg:w-12 lg:h-12 bg-surface-card rounded-2xl flex items-center justify-center border border-white/10 hover:border-primary/30 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 lg:w-12 lg:h-12 bg-surface-card rounded-2xl flex items-center justify-center border border-black/10 hover:border-primary/30 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Twitter className="w-4 h-4 lg:w-5 lg:h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 lg:w-12 lg:h-12 bg-surface-card rounded-2xl flex items-center justify-center border border-white/10 hover:border-primary/30 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 lg:w-12 lg:h-12 bg-surface-card rounded-2xl flex items-center justify-center border border-black/10 hover:border-primary/30 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Instagram className="w-4 h-4 lg:w-5 lg:h-5" />
               </a>
