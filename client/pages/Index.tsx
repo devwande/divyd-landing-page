@@ -154,7 +154,7 @@ export default function Index() {
                 {/* Subtle Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-2xl rounded-full"></div>
 
-                <div className="relative bg-gradient-to-br from-surface-elevated to-surface-card rounded-[2.5rem] lg:rounded-[3.5rem] shadow-2xl border border-white/10 p-1.5 lg:p-2 hover:scale-105 transition-transform duration-500">
+                <div className="relative bg-gradient-to-br from-surface-elevated to-surface-card rounded-[2.5rem] lg:rounded-[3.5rem] shadow-2xl border border-black/10 p-1.5 lg:p-2 hover:scale-105 transition-transform duration-500">
                   <div className="bg-surface rounded-[2rem] lg:rounded-[3rem] overflow-hidden h-full">
                     {/* Status Bar */}
                     <div className="bg-surface-elevated px-4 lg:px-6 py-2 lg:py-3 flex justify-between items-center">
