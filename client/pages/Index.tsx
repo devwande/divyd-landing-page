@@ -130,7 +130,7 @@ export default function Index() {
               </div>
 
               {/* Tally Form Embed - Mobile Optimized */}
-              <div className="glass-effect rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/10">
+              <div className="glass-effect rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 border border-black/10">
                 <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 lg:mb-6 flex items-center justify-center lg:justify-start">
                   <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2" />
                   Join the exclusive waitlist
