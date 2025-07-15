@@ -95,7 +95,7 @@
   .bg-gradient-glow {
     background: radial-gradient(
       circle at 50% 50%,
-      hsl(var(--primary) / 0.1) 0%,
+      hsl(var(--primary) / 0.05) 0%,
       transparent 50%
     );
   }
@@ -104,7 +104,7 @@
     background: linear-gradient(
       135deg,
       hsl(var(--primary)) 0%,
-      hsl(var(--success)) 100%
+      hsl(var(--primary-muted)) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
