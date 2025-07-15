@@ -540,7 +540,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-surface-elevated border-t border-white/10 py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-surface-elevated border-t border-black/10 py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             {/* Logo */}
