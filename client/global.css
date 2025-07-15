@@ -355,7 +355,7 @@
     }
   }
 
-  /* Custom scrollbar for dark theme */
+  /* Custom scrollbar for white theme */
   ::-webkit-scrollbar {
     width: 8px;
   }
