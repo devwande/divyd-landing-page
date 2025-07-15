@@ -129,22 +129,41 @@ export default function Index() {
                 </p>
               </div>
 
-              {/* Tally Form Embed - Mobile Optimized */}
-              <div className="glass-effect rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 border border-black/10">
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 lg:mb-6 flex items-center justify-center lg:justify-start">
-                  <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2" />
-                  Join the exclusive waitlist
-                </h3>
-                <iframe
-                  src="https://tally.so/embed/waJpkv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                  width="100%"
-                  height="400"
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  title="Spot Waitlist"
-                  className="rounded-2xl min-h-[300px] sm:min-h-[350px] lg:min-h-[400px]"
-                />
+              {/* Beautiful Waitlist Form */}
+              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl lg:rounded-[2rem] p-6 sm:p-8 lg:p-10 border border-black/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                {/* Subtle gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 rounded-3xl lg:rounded-[2rem] pointer-events-none"></div>
+
+                <div className="relative z-10">
+                  <div className="text-center lg:text-left mb-6 lg:mb-8">
+                    <div className="inline-flex items-center px-4 py-2 bg-black/5 rounded-full border border-black/10 mb-4">
+                      <Zap className="w-4 h-4 text-primary mr-2" />
+                      <span className="text-sm font-medium text-muted-foreground">
+                        Early Access
+                      </span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                      Join the Waitlist
+                    </h3>
+                    <p className="text-muted-foreground text-sm lg:text-base">
+                      Be first to experience the future of group payments in
+                      Nigeria
+                    </p>
+                  </div>
+
+                  <div className="bg-white/70 rounded-2xl lg:rounded-3xl p-4 lg:p-6 border border-black/10">
+                    <iframe
+                      src="https://tally.so/embed/waJpkv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                      width="100%"
+                      height="400"
+                      frameBorder="0"
+                      marginHeight={0}
+                      marginWidth={0}
+                      title="Spot Waitlist"
+                      className="rounded-xl lg:rounded-2xl min-h-[300px] sm:min-h-[350px] lg:min-h-[400px]"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
