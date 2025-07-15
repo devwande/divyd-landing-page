@@ -57,7 +57,7 @@ export default function Index() {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-surface/90 backdrop-blur-xl z-50 border-b border-white/10">
+      <nav className="fixed top-0 w-full bg-surface/90 backdrop-blur-xl z-50 border-b border-black/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
