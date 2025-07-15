@@ -517,14 +517,14 @@ export default function Index() {
             {/* Tally Form Embed */}
             <div className="max-w-2xl mx-auto glass-effect rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 mb-8 lg:mb-12 hover:scale-105 transition-transform duration-500">
               <iframe
-                src="https://tally.so/embed/m5d9zJ?hideTitle=1&transparentBackground=1"
+                src="https://tally.so/embed/waJpkv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                 width="100%"
-                height="350"
+                height="450"
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}
                 title="Spot Waitlist - Final CTA"
-                className="rounded-xl lg:rounded-2xl min-h-[300px] lg:min-h-[400px]"
+                className="rounded-xl lg:rounded-2xl min-h-[350px] lg:min-h-[450px]"
               />
             </div>
 
