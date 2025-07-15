@@ -90,7 +90,7 @@ export default function Index() {
             {/* Hero Content */}
             <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
               <div className="space-y-4 lg:space-y-6">
-                <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-white/10 backdrop-blur-sm">
+                <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-surface-elevated rounded-full border border-black/10 backdrop-blur-sm">
                   <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-2" />
                   <span className="text-xs sm:text-sm font-medium text-muted-foreground">
                     Nigeria's first social payment app 🇳🇬
