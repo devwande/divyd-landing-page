@@ -136,14 +136,14 @@ export default function Index() {
                   Join the exclusive waitlist
                 </h3>
                 <iframe
-                  src="https://tally.so/embed/m5d9zJ?hideTitle=1&transparentBackground=1"
+                  src="https://tally.so/embed/waJpkv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                   width="100%"
-                  height="300"
+                  height="400"
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}
                   title="Spot Waitlist"
-                  className="rounded-2xl min-h-[250px] sm:min-h-[300px] lg:min-h-[350px]"
+                  className="rounded-2xl min-h-[300px] sm:min-h-[350px] lg:min-h-[400px]"
                 />
               </div>
             </div>
