@@ -533,18 +533,56 @@ export default function Index() {
               management. Early users get premium features free for life.
             </p>
 
-            {/* Tally Form Embed */}
-            <div className="max-w-2xl mx-auto glass-effect rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 mb-8 lg:mb-12 hover:scale-105 transition-transform duration-500">
-              <iframe
-                src="https://tally.so/embed/waJpkv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                width="100%"
-                height="450"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                title="Spot Waitlist - Final CTA"
-                className="rounded-xl lg:rounded-2xl min-h-[350px] lg:min-h-[450px]"
-              />
+            {/* Premium Waitlist Form */}
+            <div className="max-w-3xl mx-auto relative mb-8 lg:mb-12">
+              {/* Glow effect behind form */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/5 to-black/10 blur-3xl rounded-3xl"></div>
+
+              <div className="relative bg-white/95 backdrop-blur-xl rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 border border-black/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                {/* Premium badge */}
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center px-6 py-3 bg-black text-white rounded-full text-sm font-semibold mb-4">
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    Limited Early Access
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                    Secure Your Spot
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Join 1000+ Nigerians already on the waitlist
+                  </p>
+                </div>
+
+                {/* Form container with extra styling */}
+                <div className="bg-white/80 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-black/10 shadow-inner">
+                  <iframe
+                    src="https://tally.so/embed/waJpkv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    width="100%"
+                    height="450"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    title="Spot Waitlist - Final CTA"
+                    className="rounded-xl lg:rounded-2xl min-h-[350px] lg:min-h-[450px]"
+                  />
+                </div>
+
+                {/* Trust indicators */}
+                <div className="flex items-center justify-center space-x-6 mt-6 text-xs text-muted-foreground">
+                  <div className="flex items-center">
+                    <Shield className="w-4 h-4 mr-1" />
+                    <span>Secure & Private</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Zap className="w-4 h-4 mr-1" />
+                    <span>Instant Access</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-1" />
+                    <span>Premium Features</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <button
