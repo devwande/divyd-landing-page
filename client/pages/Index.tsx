@@ -36,7 +36,47 @@ export default function Index() {
 
   // Simplified scroll handler
   useEffect(() => {
+<<<<<<< HEAD
     const handleScroll = () => setScrollY(window.scrollY);
+=======
+    const symbols = ["₦", "💳", "���", "💰", "🏦"];
+    const interval = setInterval(() => {
+      const newSymbol = {
+        id: Date.now(),
+        x: Math.random() * window.innerWidth,
+        duration: 8000 + Math.random() * 4000,
+        delay: 0,
+        symbol: symbols[Math.floor(Math.random() * symbols.length)],
+      };
+
+      setCurrencySymbols((prev) => [...prev, newSymbol]);
+
+      setTimeout(() => {
+        setCurrencySymbols((prev) => prev.filter((s) => s.id !== newSymbol.id));
+      }, newSymbol.duration);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Scroll animations
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+
+      // Trigger animations based on scroll position
+      const sections = [painPointsRef, featuresRef];
+      sections.forEach((ref) => {
+        if (ref.current) {
+          const rect = ref.current.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            ref.current.classList.add("animate-fade-in-up");
+          }
+        }
+      });
+    };
+
+>>>>>>> 147d008f9a1432184752d5844ed969ac4a0a7ea4
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -98,7 +138,14 @@ export default function Index() {
                 </div>
 
                 <div className="space-y-2">
+<<<<<<< HEAD
                   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+=======
+                  <h1
+                    className="text-5xl sm:text-6xl font-bold leading-tight"
+                    style={{ fontSize: "64px" }}
+                  >
+>>>>>>> 147d008f9a1432184752d5844ed969ac4a0a7ea4
                     <div
                       className={`text-foreground transition-opacity duration-500 ${
                         typewriterStage >= 1 ? "opacity-100" : "opacity-0"
