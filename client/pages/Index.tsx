@@ -177,7 +177,7 @@ export default function Index() {
                         <span className="font-bold text-foreground text-sm lg:text-base">
                           Spot
                         </span>
-                        <div className="w-6 h-6 lg:w-8 lg:h-8 bg-surface-elevated rounded-full border border-white/10"></div>
+                        <div className="w-6 h-6 lg:w-8 lg:h-8 bg-surface-elevated rounded-full border border-black/10"></div>
                       </div>
 
                       {/* Transaction Cards */}
