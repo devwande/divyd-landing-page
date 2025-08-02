@@ -13,7 +13,7 @@ export default function Terms() {
                 <span className="text-white font-bold text-xl">S</span>
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-success bg-clip-text text-transparent">
-                Spot
+                Divyd
               </span>
             </Link>
             <Link
@@ -69,7 +69,7 @@ export default function Terms() {
               </h2>
 
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-                Our comprehensive Terms of Service will be available when Spot
+                Our comprehensive Terms of Service will be available when Divyd
                 launches. We're working with legal experts to ensure every
                 detail protects both you and our community.
               </p>
@@ -112,7 +112,7 @@ export default function Terms() {
               <p className="text-muted-foreground">
                 Questions about our upcoming terms?{" "}
                 <a
-                  href="mailto:legal@spotapp.ng"
+                  href="mailto:legal@Divydapp.ng"
                   className="text-primary hover:text-success transition-colors duration-300 font-medium"
                 >
                   Contact our legal team

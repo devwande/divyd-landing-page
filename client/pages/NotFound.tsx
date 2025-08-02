@@ -91,7 +91,7 @@ const NotFound = () => {
             >
               <div className="font-medium text-foreground mb-1">Homepage</div>
               <div className="text-sm text-muted-foreground">
-                Learn about Spot and join our waitlist
+                Learn about Divyd and join our waitlist
               </div>
             </Link>
 

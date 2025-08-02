@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,8 +6,8 @@
 
 @layer base {
   /**
-   * Dark Theme Tailwind CSS Variables
-   * All colors are optimized for dark mode and accessibility
+   * Black, Orange & White Theme Tailwind CSS Variables
+   * All colors are optimized for the new brand color palette
   */
   :root {
     /* Light Backgrounds */
@@ -21,19 +21,19 @@
     --muted-foreground: 0 0% 45%;
     --subtle-foreground: 0 0% 35%;
 
-    /* Brand Colors */
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --primary-muted: 0 0% 20%;
+    /* Brand Colors - Black, Orange & White */
+    --primary: 25 95% 53%; /* Vibrant Orange */
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 25 85% 45%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 0 0% 9%; /* Black */
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 25 95% 53%; /* Orange accent */
+    --accent-foreground: 0 0% 100%;
 
     /* Status Colors */
-    --success: 142 71% 45%;
+    --success: 25 95% 53%; /* Orange for success */
     --warning: 38 92% 50%;
     --error: 0 84% 60%;
     --info: 199 89% 48%;
@@ -41,7 +41,7 @@
     /* Interactive Elements */
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 0% 9%;
+    --ring: 25 95% 53%;
 
     /* UI Elements */
     --popover: 0 0% 100%;
@@ -64,7 +64,7 @@
 
   body {
     @apply bg-surface text-foreground antialiased;
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     background: hsl(var(--surface));
     color: hsl(var(--foreground));
   }
@@ -75,7 +75,7 @@
 }
 
 @layer utilities {
-  /* Dark Theme Utilities */
+  /* Black, Orange & White Theme Utilities */
   .bg-gradient-dark {
     background: linear-gradient(
       135deg,
@@ -92,6 +92,22 @@
     );
   }
 
+  .bg-gradient-black-orange {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--secondary)) 0%,
+      hsl(var(--primary)) 100%
+    );
+  }
+
+  .bg-gradient-orange-white {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--background)) 100%
+    );
+  }
+
   .bg-gradient-glow {
     background: radial-gradient(
       circle at 50% 50%,
@@ -101,6 +117,17 @@
   }
 
   .text-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--secondary)) 0%,
+      hsl(var(--primary)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-orange {
     background: linear-gradient(
       135deg,
       hsl(var(--primary)) 0%,
@@ -121,6 +148,10 @@
     box-shadow: 0 0 20px hsl(var(--primary) / 0.1);
   }
 
+  .glow-effect-orange {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+  }
+
   .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out forwards;
     opacity: 0;
@@ -129,6 +160,22 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-gentle {
+    animation: pulse-gentle 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.6s ease-out forwards;
   }
 
   .typewriter {
@@ -226,6 +273,38 @@
     animation: particle-float 3s ease-out forwards;
   }
 
+  /* CTA Button Styles */
+  .cta-button {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-muted)) 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px hsl(var(--primary) / 0.3);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px hsl(var(--primary) / 0.4);
+  }
+
+  .cta-button-secondary {
+    background: transparent;
+    color: hsl(var(--primary));
+    border: 2px solid hsl(var(--primary));
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button-secondary:hover {
+    background: hsl(var(--primary));
+    color: white;
+    transform: translateY(-2px);
+  }
+
   @keyframes particle-float {
     0% {
       transform: translateY(0) scale(1);
@@ -251,6 +330,46 @@
     }
     50% {
       transform: translateY(-10px);
+    }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes pulse-gentle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 

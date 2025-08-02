@@ -13,7 +13,7 @@ export default function Privacy() {
                 <span className="text-white font-bold text-xl">S</span>
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-success bg-clip-text text-transparent">
-                Spot
+                Divyd
               </span>
             </Link>
             <Link
@@ -94,7 +94,7 @@ export default function Privacy() {
                   Minimal Data
                 </h3>
                 <p className="text-muted-foreground">
-                  We only collect what's absolutely necessary for Spot to work
+                  We only collect what's absolutely necessary for Divyd to work
                   perfectly.
                 </p>
               </div>
@@ -157,15 +157,15 @@ export default function Privacy() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <a
-                  href="mailto:privacy@spotapp.ng"
+                  href="mailto:privacy@Divydapp.ng"
                   className="text-primary hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"
                 >
                   <Lock className="w-4 h-4" />
-                  <span>privacy@spotapp.ng</span>
+                  <span>privacy@Divydapp.ng</span>
                 </a>
                 <span className="text-muted-foreground hidden sm:block">•</span>
                 <a
-                  href="mailto:dpo@spotapp.ng"
+                  href="mailto:dpo@Divydapp.ng"
                   className="text-primary hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"
                 >
                   <Shield className="w-4 h-4" />
