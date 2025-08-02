@@ -102,145 +102,179 @@ export default function Index() {
 
       {/* Hero Section */}
       <section
-  id="hero"
-  className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
->
-  <div className="w-full max-w-7xl mx-auto relative z-10 px-2 sm:px-4">
-    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      {/* Hero Content */}
-      <div className="space-y-6 text-center md:text-left">
-        <div className="space-y-4">
-          <div className="inline-flex items-center px-3 py-1.5 bg-orange-50 rounded-full border border-orange-200 backdrop-blur-sm text-xs sm:text-sm animate-slide-up">
-            <Sparkles className="w-4 h-4 text-orange-500 mr-2" />
-            <span className="text-orange-700 font-medium">
-              Nigeria's first social payment app 🇳🇬
-            </span>
-          </div>
-
-          <div className="space-y-1.5 sm:space-y-2">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-snug">
-              <div className={`transition-opacity duration-500 ${
-                typewriterStage >= 1 ? "opacity-100" : "opacity-0"
-              }`}>
-                Split bills.
-              </div>
-              <div className={`transition-opacity duration-500 ${
-                typewriterStage >= 2 ? "opacity-100" : "opacity-0"
-              }`}>
-                Send reminders.
-              </div>
-              <div className={`text-gradient transition-opacity duration-500 ${
-                typewriterStage >= 3 ? "opacity-100" : "opacity-0"
-              }`}>
-                Get paid.
-              </div>
-            </h1>
-          </div>
-
-          <p className="text-sm sm:text-base lg:text-xl text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0">
-            Track who owes what, set deadlines, and get your money — without awkward chats.
-          </p>
-        </div>
-
-        {/* CTA Card */}
-        <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-orange-200/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] animate-scale-in">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-orange-100/30 rounded-2xl pointer-events-none"></div>
-
-          <div className="relative z-10">
-            <div className="text-center md:text-left mb-5">
-              <div className="inline-flex items-center px-3 py-1.5 bg-orange-100 rounded-full border border-orange-200 mb-3 text-xs sm:text-sm">
-                <Zap className="w-4 h-4 text-orange-500 mr-2" />
-                <span className="text-orange-700 font-medium">Early Access</span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-black mb-1">
-                Join the Waitlist
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm">
-                Be first to experience the future of group payments in Nigeria
-              </p>
-            </div>
-            <WaitlistForm />
-          </div>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="flex items-center justify-center space-x-6 mt-6 text-xs text-gray-500">
-                  <div className="flex items-center">
-                    <Shield className="w-4 h-4 mr-1 text-orange-500" />
-                    <span>Secure & Private</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Zap className="w-4 h-4 mr-1 text-orange-500" />
-                    <span>Instant Access</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 mr-1 text-orange-500" />
-                    <span>Premium Features</span>
-                  </div>
-                </div>
-      </div>
-
-      {/* Phone Mockup */}
-      <div className="relative flex justify-center">
-        <div className="w-[240px] h-[440px] sm:w-64 sm:h-[500px] lg:w-72 lg:h-[560px] animate-float">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-black/10 blur-2xl rounded-full animate-pulse-gentle"></div>
-          <div className="relative bg-gradient-to-br from-white to-orange-50 rounded-[2rem] shadow-xl border border-orange-200/30 p-1.5">
-            <div className="bg-white rounded-xl overflow-hidden h-full">
-              {/* Status Bar */}
-              <div className="bg-gradient-to-r from-black to-orange-600 px-3 py-2 flex justify-between items-center text-white text-xs">
-                <div>9:41</div>
-                <div className="flex space-x-1">
-                  <div className="w-1 h-1 bg-orange-400 rounded-full"></div>
-                  <div className="w-1 h-1 bg-orange-300 rounded-full"></div>
-                  <div className="w-1 h-1 bg-white rounded-full"></div>
-                </div>
-              </div>
-
-              <div className="p-4 space-y-4">
-                {/* App Header */}
-                <div className="flex items-center justify-between">
-                  <div className="w-6 h-6 bg-gradient-to-br from-black to-orange-500 rounded-xl flex items-center justify-center text-white text-xs font-bold">
-                    D
-                  </div>
-                  <span className="font-bold text-sm text-black">Divyd</span>
-                  <div className="w-6 h-6 bg-orange-100 rounded-full border border-orange-200"></div>
+        id="hero"
+        className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      >
+        <div className="w-full max-w-7xl mx-auto relative z-10 px-2 sm:px-4">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Hero Content */}
+            <div className="space-y-6 text-center md:text-left">
+              <div className="space-y-4">
+                <div className="inline-flex items-center px-3 py-1.5 mt-5 bg-orange-50 rounded-full border border-orange-200 backdrop-blur-sm text-sm sm:text-base animate-slide-up">
+                  <Sparkles className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="text-orange-700 font-medium">
+                    Nigeria's first social payment app 🇳🇬
+                  </span>
                 </div>
 
-                {/* Transactions */}
-                <div className="space-y-3">
-                  {[
-                    { title: "Uber to VI", amount: "₦2,500", people: "3 people • Split equally", dot: "bg-orange-500" },
-                    { title: "Dinner at Terra", amount: "₦18,000", people: "4 people • Custom split", dot: "bg-orange-400" },
-                    { title: "Netflix Subscription", amount: "₦4,400", people: "5 people • Monthly", dot: "bg-orange-500" }
-                  ].map((item, i) => (
+                <div className="space-y-1.5 sm:space-y-2">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-snug">
                     <div
-                      key={i}
-                      className={`bg-gradient-to-r from-orange-50 to-white rounded-xl p-3 border border-orange-200 hover:border-orange-400 transition-colors animate-slide-up`}
-                      style={{ animationDelay: `${i * 0.2}s` }}
+                      className={`transition-opacity duration-500 ${
+                        typewriterStage >= 1 ? "opacity-100" : "opacity-0"
+                      }`}
                     >
-                      <div className="flex justify-between text-xs text-gray-600 mb-1">
-                        <div>{item.title}</div>
-                        <div className={`w-2 h-2 ${item.dot} rounded-full`}></div>
-                      </div>
-                      <div className="text-sm font-bold text-black">{item.amount}</div>
-                      <div className="text-xs text-orange-600 mt-1">{item.people}</div>
+                      Split bills.
                     </div>
-                  ))}
+                    <div
+                      className={`transition-opacity duration-500 ${
+                        typewriterStage >= 2 ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      Send reminders.
+                    </div>
+                    <div
+                      className={`text-gradient transition-opacity duration-500 ${
+                        typewriterStage >= 3 ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      Get paid.
+                    </div>
+                  </h1>
                 </div>
 
-                {/* Bottom CTA */}
-                <div className="bg-gradient-to-r from-black to-orange-500 rounded-lg p-3 text-center cursor-pointer animate-bounce-gentle hover:scale-105 transition-transform duration-300">
-                  <div className="text-white text-sm font-semibold">Send Reminder</div>
+                <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0">
+                  Track who owes what, set deadlines, and get your money —
+                  without awkward chats.
+                </p>
+              </div>
+
+              {/* CTA Card */}
+              <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-orange-200/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] animate-scale-in">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-orange-100/30 rounded-2xl pointer-events-none"></div>
+
+                <div className="relative z-10">
+                  <div className="text-center md:text-left mb-5">
+                    <div className="inline-flex items-center px-3 py-1.5 bg-orange-100 rounded-full border border-orange-200 mb-3 text-sm sm:text-base">
+                      <Zap className="w-4 h-4 text-orange-500 mr-2" />
+                      <span className="text-orange-700 font-medium">
+                        Early Access
+                      </span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-1">
+                      Join the Waitlist
+                    </h3>
+                    <p className="text-gray-600 text-sm sm:text-base lg:text-lg">
+                      Be first to experience the future of group payments in
+                      Nigeria
+                    </p>
+                  </div>
+                  <WaitlistForm />
+                </div>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center justify-center space-x-6 mt-6 text-sm sm:text-base text-gray-500">
+                <div className="flex items-center">
+                  <Shield className="w-4 h-4 mr-1 text-orange-500" />
+                  <span>Secure & Private</span>
+                </div>
+                <div className="flex items-center">
+                  <Zap className="w-4 h-4 mr-1 text-orange-500" />
+                  <span>Instant Access</span>
+                </div>
+                <div className="flex items-center">
+                  <Star className="w-4 h-4 mr-1 text-orange-500" />
+                  <span>Premium Features</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Phone Mockup */}
+            <div className="relative flex justify-center">
+              <div className="w-[280px] h-[580px] sm:w-80 sm:h-[620px] lg:w-[400px] lg:h-[720px] xl:w-[440px] xl:h-[780px] animate-float">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-black/10 blur-2xl rounded-full animate-pulse-gentle"></div>
+                <div className="relative bg-gradient-to-br from-white to-orange-50 rounded-[2rem] shadow-xl border border-orange-200/30 p-1.5">
+                  <div className="bg-white rounded-xl overflow-hidden h-full">
+                    {/* Status Bar */}
+                    <div className="bg-gradient-to-r from-black to-orange-600 px-3 py-2 flex justify-between items-center text-white text-xs">
+                      <div>9:41</div>
+                      <div className="flex space-x-1">
+                        <div className="w-1 h-1 bg-orange-400 rounded-full"></div>
+                        <div className="w-1 h-1 bg-orange-300 rounded-full"></div>
+                        <div className="w-1 h-1 bg-white rounded-full"></div>
+                      </div>
+                    </div>
+
+                    <div className="p-4 space-y-4">
+                      {/* App Header */}
+                      <div className="flex items-center justify-between">
+                        <div className="w-6 h-6 bg-gradient-to-br from-black to-orange-500 rounded-xl flex items-center justify-center text-white text-xs font-bold">
+                          D
+                        </div>
+                        <span className="font-bold text-sm text-black">
+                          Divyd
+                        </span>
+                        <div className="w-6 h-6 bg-orange-100 rounded-full border border-orange-200"></div>
+                      </div>
+
+                      {/* Transactions */}
+                      <div className="space-y-3">
+                        {[
+                          {
+                            title: "Uber to VI",
+                            amount: "₦2,500",
+                            people: "3 people • Split equally",
+                            dot: "bg-orange-500",
+                          },
+                          {
+                            title: "Dinner at Terra",
+                            amount: "₦18,000",
+                            people: "4 people • Custom split",
+                            dot: "bg-orange-400",
+                          },
+                          {
+                            title: "Netflix Subscription",
+                            amount: "₦4,400",
+                            people: "5 people • Monthly",
+                            dot: "bg-orange-500",
+                          },
+                        ].map((item, i) => (
+                          <div
+                            key={i}
+                            className={`bg-gradient-to-r from-orange-50 to-white rounded-xl p-3 border border-orange-200 hover:border-orange-400 transition-colors animate-slide-up`}
+                            style={{ animationDelay: `${i * 0.2}s` }}
+                          >
+                            <div className="flex justify-between text-xs text-gray-600 mb-1">
+                              <div>{item.title}</div>
+                              <div
+                                className={`w-2 h-2 ${item.dot} rounded-full`}
+                              ></div>
+                            </div>
+                            <div className="text-sm font-bold text-black">
+                              {item.amount}
+                            </div>
+                            <div className="text-xs text-orange-600 mt-1">
+                              {item.people}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Bottom CTA */}
+                      <div className="bg-gradient-to-r from-black to-orange-500 rounded-lg p-3 text-center cursor-pointer animate-bounce-gentle hover:scale-105 transition-transform duration-300">
+                        <div className="text-white text-sm font-semibold">
+                          Send Reminder
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Pain Points Section */}
       <section
@@ -252,34 +286,37 @@ export default function Index() {
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 lg:mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full border border-orange-200 backdrop-blur-sm mb-4 lg:mb-6 animate-slide-up">
-              <span className="text-sm font-medium text-orange-700">
-                Real problems, real solutions 🇳🇬
+              <span className="text-sm sm:text-base font-medium text-orange-700">
+                Real problems, Real solutions
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 lg:mb-6">
               Tired of chasing your friends for money?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
               We understand the struggle. Here's what happens too often in
               Nigerian friend groups.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1 */}
             <div className="group bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-orange-200/30 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-slide-up">
               <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl lg:rounded-3xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 <Car className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold text-black mb-3 lg:mb-4">
+              <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-black mb-3 lg:mb-4">
                 You paid for Uber again. No one sends you back.
               </h3>
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-base xl:text-lg text-gray-600 leading-relaxed">
                 Always the one covering transport? Never getting reimbursed? We
                 feel you.
               </p>
               <div className="mt-4 lg:mt-6 flex items-center space-x-2">
                 <div className="w-6 lg:w-8 h-1 bg-gradient-to-r from-black to-orange-500 rounded-full"></div>
-                <span className="text-xs text-gray-500">Too relatable</span>
+                <span className="text-xs sm:text-sm text-gray-500">
+                  Too relatable
+                </span>
               </div>
             </div>
 
@@ -291,16 +328,16 @@ export default function Index() {
               <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl lg:rounded-3xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 <UtensilsCrossed className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold text-black mb-3 lg:mb-4">
+              <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-black mb-3 lg:mb-4">
                 Dinner was ₦18k. Everyone's suddenly offline.
               </h3>
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-base xl:text-lg text-gray-600 leading-relaxed">
                 Group dinners are fun until it's time to split the bill and
                 everyone disappears.
               </p>
               <div className="mt-4 lg:mt-6 flex items-center space-x-2">
                 <div className="w-6 lg:w-8 h-1 bg-gradient-to-r from-black to-orange-500 rounded-full"></div>
-                <span className="text-xs text-gray-500">
+                <span className="text-xs sm:text-sm text-gray-500">
                   Story of our lives
                 </span>
               </div>
@@ -314,16 +351,18 @@ export default function Index() {
               <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-black to-orange-600 rounded-2xl lg:rounded-3xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 <Play className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold text-black mb-3 lg:mb-4">
+              <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-black mb-3 lg:mb-4">
                 You pay for Netflix — they all stream and vanish.
               </h3>
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-base xl:text-lg text-gray-600 leading-relaxed">
                 Subscriptions add up. Everyone enjoys, but somehow you're always
                 the one paying.
               </p>
               <div className="mt-4 lg:mt-6 flex items-center space-x-2">
                 <div className="w-6 lg:w-8 h-1 bg-gradient-to-r from-black to-orange-500 rounded-full"></div>
-                <span className="text-xs text-gray-500">Every single time</span>
+                <span className="text-xs sm:text-sm text-gray-500">
+                  Every single time
+                </span>
               </div>
             </div>
           </div>
@@ -338,14 +377,14 @@ export default function Index() {
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 lg:mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full border border-orange-200 backdrop-blur-sm mb-4 lg:mb-6 animate-slide-up">
-              <span className="text-sm font-medium text-orange-700">
-                Simple as 1, 2, 3 🇳🇬
+              <span className="text-sm sm:text-base font-medium text-orange-700">
+                Simple as 1, 2, 3 
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 lg:mb-6">
               How It Works
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
               Three simple steps to never chase money again. Built for the
               modern Nigerian.
             </p>
@@ -362,10 +401,10 @@ export default function Index() {
                   1
                 </div>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-black mb-3 lg:mb-4">
+              <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-black mb-3 lg:mb-4">
                 Log a transaction
               </h3>
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-base xl:text-lg text-gray-600 leading-relaxed">
                 Add the amount and select people involved. Snap a receipt or
                 enter manually.
               </p>
@@ -384,10 +423,10 @@ export default function Index() {
                   2
                 </div>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-black mb-3 lg:mb-4">
+              <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-black mb-3 lg:mb-4">
                 Send reminders
               </h3>
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-base xl:text-lg text-gray-600 leading-relaxed">
                 Set deadlines and send gentle push notifications or WhatsApp
                 reminders.
               </p>
@@ -406,10 +445,10 @@ export default function Index() {
                   3
                 </div>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-black mb-3 lg:mb-4">
+              <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-black mb-3 lg:mb-4">
                 Get paid
               </h3>
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-base xl:text-lg text-gray-600 leading-relaxed">
                 They pay you via card through Paystack. Money hits your account
                 instantly.
               </p>
@@ -425,10 +464,16 @@ export default function Index() {
       >
         <div className="container mx-auto">
           <div className="text-center mb-12 lg:mb-16">
+            {/* <div className="inline-flex items-center px-4 py-2 bg-white rounded-full border border-orange-200 backdrop-blur-sm mb-4 lg:mb-6 animate-slide-up">
+              <Shield className="w-4 h-4 text-orange-500 mr-2" />
+              <span className="text-sm sm:text-base font-medium text-orange-700">
+                Built for modern Nigerians 🇳🇬
+              </span>
+            </div> */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 lg:mb-6">
               Everything you need
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
               Powerful features designed specifically for Nigerian social
               spending and group dynamics.
             </p>
@@ -472,10 +517,12 @@ export default function Index() {
                     <feature.icon className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-base lg:text-lg font-bold text-black mb-1 lg:mb-2">
+                    <h3 className="text-base lg:text-lg xl:text-xl font-bold text-black mb-1 lg:mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-gray-600">{feature.desc}</p>
+                    <p className="text-sm lg:text-base xl:text-lg text-gray-600">
+                      {feature.desc}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -493,17 +540,17 @@ export default function Index() {
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full border border-orange-200 backdrop-blur-sm mb-4 lg:mb-6 animate-slide-up">
               <Sparkles className="w-4 h-4 text-orange-500 mr-2" />
-              <span className="text-sm font-medium text-orange-700">
+              <span className="text-sm sm:text-base font-medium text-orange-700">
                 Launch coming soon 🇳🇬
               </span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 lg:mb-6">
               Join the Waitlist to <span className="text-gradient">Divyd</span>{" "}
-              your money 💸
+              your money 
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 lg:mb-12 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 lg:mb-12 max-w-2xl mx-auto">
               Be among the first to experience stress-free group expense
               management. Early users get premium features free for life.
             </p>
@@ -514,21 +561,21 @@ export default function Index() {
 
               <div className="relative bg-white/95 backdrop-blur-xl rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-12 border border-orange-200/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
                 <div className="text-center mb-8">
-                  <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-black to-orange-500 text-white rounded-full text-sm font-semibold mb-4 animate-pulse-gentle">
+                  <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-black to-orange-500 text-white rounded-full text-sm sm:text-base font-semibold mb-4 animate-pulse-gentle">
                     <Sparkles className="w-4 h-4 mr-2" />
                     Limited Early Access
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-black mb-2">
+                  <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-black mb-2">
                     Secure Your Divyd
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-sm sm:text-base lg:text-lg">
                     Join 1000+ Nigerians already on the waitlist
                   </p>
                 </div>
 
                 <WaitlistForm />
 
-                <div className="flex items-center justify-center space-x-6 mt-6 text-xs text-gray-500">
+                <div className="flex items-center justify-center space-x-6 mt-6 text-sm sm:text-base text-gray-500">
                   <div className="flex items-center">
                     <Shield className="w-4 h-4 mr-1 text-orange-500" />
                     <span>Secure & Private</span>
@@ -547,7 +594,7 @@ export default function Index() {
 
             <button
               onClick={() => scrollToSection("hero")}
-              className="group text-orange-500 hover:text-orange-600 font-medium flex items-center justify-center mx-auto space-x-2 transition-all duration-300 hover:scale-105"
+              className="group text-orange-500 hover:text-orange-600 font-medium flex items-center justify-center mx-auto space-x-2 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
             >
               <span>Back to Top</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
@@ -598,6 +645,7 @@ export default function Index() {
             <div className="flex items-center space-x-4">
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://x.com/Divydapp"
                 className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-orange-200/30 hover:border-orange-400 text-orange-200 hover:text-white transition-all duration-300 hover:scale-110"
               >
@@ -605,6 +653,7 @@ export default function Index() {
               </a>
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://www.instagram.com/divydapp/"
                 className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-orange-200/30 hover:border-orange-400 text-orange-200 hover:text-white transition-all duration-300 hover:scale-110"
               >
@@ -612,6 +661,7 @@ export default function Index() {
               </a>
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://www.instagram.com/divydapp/"
                 className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-orange-200/30 hover:border-orange-400 text-orange-200 hover:text-white transition-all duration-300 hover:scale-110"
               >
@@ -619,6 +669,7 @@ export default function Index() {
               </a>
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://www.tiktok.com/@divydapp"
                 className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-orange-200/30 hover:border-orange-400 text-orange-200 hover:text-white transition-all duration-300 hover:scale-110"
               >
