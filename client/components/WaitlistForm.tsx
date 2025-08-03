@@ -1,17 +1,37 @@
-import React, { useState, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
-import emailjs from "@emailjs/browser";
+import React, { useState, useEffect } from "react";
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      execute(siteKey: string, options: { action: string }): Promise<string>;
+      ready(cb: () => void): void;
+    };
+  }
+}
 
 export default function WaitlistForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
-  const [recaptchaToken, setRecaptchaToken] = useState("");
+  const [formData, setFormData] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+  const API_URL = import.meta.env.VITE_WAITLIST_API_URL;
+
+  useEffect(() => {
+    const scriptId = "recaptcha-script";
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+      script.async = true;
+      script.defer = true;
+      script.id = scriptId;
+      document.body.appendChild(script);
+      console.log("reCAPTCHA script injected.");
+    } else {
+      console.log("reCAPTCHA script already present.");
+    }
+  }, [SITE_KEY]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,48 +41,57 @@ export default function WaitlistForm() {
       return;
     }
 
-    if (!recaptchaToken) {
-      setError("Please complete the reCAPTCHA verification.");
-      return;
-    }
-
     setIsSubmitting(true);
     setError("");
 
     try {
-      // EmailJS (replace with your EmailJS credentials)
-      await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        {
-          to_name: "Divyd Team",
-          from_name: formData.name,
-          from_email: formData.email,
-          message: `New waitlist signup: ${formData.name} (${formData.email})`,
+      if (!window.grecaptcha) {
+        throw new Error("reCAPTCHA not loaded");
+      }
+
+      await new Promise<void>((resolve) => {
+        window.grecaptcha.ready(() => resolve());
+      });
+
+      const token = await window.grecaptcha.execute(SITE_KEY, {
+        action: "submit",
+      });
+
+      if (!token || typeof token !== "string" || token.length < 50) {
+        throw new Error("Failed reCAPTCHA check. Are you human?");
+      }
+
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
-      );
+        body: JSON.stringify({
+          full_name: formData.name,
+          email: formData.email,
+        }),
+      });
+
+      console.log("reCAPTCHA response", res);
+
+      if (!res.ok) {
+        throw new Error("Failed to submit form.");
+      }
+
       setIsSubmitted(true);
       setFormData({ name: "", email: "" });
-      setRecaptchaToken("");
-
-      if (recaptchaRef.current) {
-        recaptchaRef.current.reset();
-      }
     } catch (err) {
       console.error(err);
-      setError("Something went wrong. Please try again.");
+      setError("reCAPTCHA failed or network error. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   if (isSubmitted) {
@@ -100,20 +129,6 @@ export default function WaitlistForm() {
         required
       />
 
-      <div className="flex justify-center">
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey="6Leep5grAAAAAIvxCtomB3NuQiz8pGT8NHtRvD2d"
-          onChange={(token) => setRecaptchaToken(token || "")}
-          onExpired={() => setRecaptchaToken("")}
-          onError={() =>
-            setError("reCAPTCHA error. Please refresh and try again.")
-          }
-          theme="light"
-          size="normal"
-        />
-      </div>
-
       {error && (
         <div className="text-red-600 text-sm p-3 bg-red-50 rounded-lg border border-red-200">
           {error}
@@ -129,8 +144,7 @@ export default function WaitlistForm() {
       </button>
 
       <p className="text-xs text-gray-500 text-center">
-        By joining the waitlist, you agree to receive updates about Divyd's
-        launch.
+        By joining the waitlist, you agree to receive updates about Divyd's launch.
       </p>
     </form>
   );
