@@ -32,8 +32,8 @@ export default function Index() {
   useEffect(() => {
     const stages = [
       { delay: 500, stage: 1 },
-      { delay: 2000, stage: 2 },
-      { delay: 3500, stage: 3 },
+      { delay: 900, stage: 2 },
+      { delay: 1200, stage: 3 },
     ];
 
     stages.forEach(({ delay, stage }) => {
