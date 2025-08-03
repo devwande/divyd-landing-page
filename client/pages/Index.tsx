@@ -22,6 +22,7 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
+import DivydLogo from "../../public/logo.svg";
 import WaitlistForm from "../components/WaitlistForm";
 
 export default function Index() {
@@ -69,10 +70,8 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-black to-orange-500 rounded-2xl flex items-center justify-center shadow-lg animate-pulse-gentle">
-                <span className="text-white font-bold text-lg sm:text-xl">
-                  D
-                </span>
+              <div className=" flex items-center justify-center animate-pulse-gentle">
+                  <img src={DivydLogo} alt="Divyd" className="w-8 h-8" />
               </div>
               <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-black to-orange-500 bg-clip-text text-transparent">
                 Divyd
@@ -182,11 +181,12 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="relative flex justify-center">
-              <div className="w-[280px] h-[580px] sm:w-80 sm:h-[620px] lg:w-[400px] lg:h-[720px] xl:w-[440px] xl:h-[780px] animate-float">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-black/10 blur-2xl rounded-full animate-pulse-gentle"></div>
+            <div className="relative flex justify-center pt-20">
+              <div className="w-[320px] h-[700px] sm:w-[360px] sm:h-[740px] lg:w-[320px] lg:h-[840px] hover:scale-105 animation-duration transition-all">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-black/10 blur-2xl rounded-full"></div>
                 <div className="relative bg-gradient-to-br from-white to-orange-50 rounded-[2rem] shadow-xl border border-orange-200/30 p-1.5">
                   <div className="bg-white rounded-xl overflow-hidden h-full">
+                    {/* Status Bar */}
                     <div className="bg-gradient-to-r from-black to-orange-600 px-3 py-2 flex justify-between items-center text-white text-xs">
                       <div>9:41</div>
                       <div className="flex space-x-1">
@@ -196,14 +196,13 @@ export default function Index() {
                       </div>
                     </div>
 
+                    {/* Content */}
                     <div className="p-4 space-y-4">
                       <div className="flex items-center justify-between">
-                        <div className="w-6 h-6 bg-gradient-to-br from-black to-orange-500 rounded-xl flex items-center justify-center text-white text-xs font-bold">
-                          D
+                        <div className="flex items-center justify-center text-white text-xs font-bold">
+                          <img src={DivydLogo} alt="Divyd" className="w-4 h-4" />
                         </div>
-                        <span className="font-bold text-sm text-black">
-                          Divyd
-                        </span>
+                        <span className="font-bold text-sm text-black">Divyd</span>
                         <div className="w-6 h-6 bg-orange-100 rounded-full border border-orange-200"></div>
                       </div>
 
@@ -230,14 +229,11 @@ export default function Index() {
                         ].map((item, i) => (
                           <div
                             key={i}
-                            className={`bg-gradient-to-r from-orange-50 to-white rounded-xl p-3 border border-orange-200 hover:border-orange-400 transition-colors animate-slide-up`}
-                            style={{ animationDelay: `${i * 0.2}s` }}
+                            className={`bg-gradient-to-r from-orange-50 to-white rounded-xl p-3 border border-orange-200 hover:border-orange-400 transition-colors`}
                           >
                             <div className="flex justify-between text-xs text-gray-600 mb-1">
                               <div>{item.title}</div>
-                              <div
-                                className={`w-2 h-2 ${item.dot} rounded-full`}
-                              ></div>
+                              <div className={`w-2 h-2 ${item.dot} rounded-full`}></div>
                             </div>
                             <div className="text-sm font-bold text-black">
                               {item.amount}
@@ -249,7 +245,7 @@ export default function Index() {
                         ))}
                       </div>
 
-                      <div className="bg-gradient-to-r from-black to-orange-500 rounded-lg p-3 text-center cursor-pointer animate-bounce-gentle hover:scale-105 transition-transform duration-300">
+                      <div className="bg-gradient-to-r from-black to-orange-500 rounded-lg p-3 text-center cursor-pointer hover:scale-105 transition-transform duration-300">
                         <div className="text-white text-sm font-semibold">
                           Send Reminder
                         </div>
@@ -259,6 +255,8 @@ export default function Index() {
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </section>
@@ -512,7 +510,7 @@ export default function Index() {
             <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full border border-orange-200 backdrop-blur-sm mb-4 lg:mb-6 animate-slide-up">
               <Sparkles className="w-4 h-4 text-orange-500 mr-2" />
               <span className="text-sm sm:text-base font-medium text-orange-700">
-                Launch coming soon 🇳🇬
+                Launch coming soon
               </span>
             </div>
 
@@ -577,10 +575,8 @@ export default function Index() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg lg:text-xl">
-                  D
-                </span>
+            <div className=" flex items-center justify-center animate-pulse-gentle">
+                  <img src={DivydLogo} alt="Divyd" className="w-8 h-8" />
               </div>
               <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-orange-400 to-white bg-clip-text text-transparent">
                 Divyd
