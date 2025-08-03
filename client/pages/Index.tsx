@@ -29,7 +29,6 @@ export default function Index() {
   const [typewriterStage, setTypewriterStage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Typewriter effect
   useEffect(() => {
     const stages = [
       { delay: 500, stage: 1 },
@@ -42,7 +41,6 @@ export default function Index() {
     });
   }, []);
 
-  // Scroll handler with visibility detection
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -58,7 +56,6 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-surface">
-      {/* Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-orange-400/10 to-orange-600/5 rounded-full blur-3xl animate-float opacity-60" />
         <div
@@ -68,7 +65,6 @@ export default function Index() {
         <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-br from-orange-300/8 to-black/5 rounded-full blur-2xl animate-pulse-gentle opacity-40" />
       </div>
 
-      {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-xl z-50 border-b border-orange-200/20 shadow-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -100,14 +96,12 @@ export default function Index() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section
         id="hero"
         className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
       >
         <div className="w-full max-w-7xl mx-auto relative z-10 px-2 sm:px-4">
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Hero Content */}
             <div className="space-y-6 text-center md:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center px-3 py-1.5 mt-5 bg-orange-50 rounded-full border border-orange-200 backdrop-blur-sm text-sm sm:text-base animate-slide-up">
@@ -149,7 +143,6 @@ export default function Index() {
                 </p>
               </div>
 
-              {/* CTA Card */}
               <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-orange-200/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] animate-scale-in">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-orange-100/30 rounded-2xl pointer-events-none"></div>
 
@@ -173,7 +166,6 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Trust Indicators */}
               <div className="flex items-center justify-center space-x-6 mt-6 text-sm sm:text-base text-gray-500">
                 <div className="flex items-center">
                   <Shield className="w-4 h-4 mr-1 text-orange-500" />
@@ -190,13 +182,11 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Phone Mockup */}
             <div className="relative flex justify-center">
               <div className="w-[280px] h-[580px] sm:w-80 sm:h-[620px] lg:w-[400px] lg:h-[720px] xl:w-[440px] xl:h-[780px] animate-float">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-black/10 blur-2xl rounded-full animate-pulse-gentle"></div>
                 <div className="relative bg-gradient-to-br from-white to-orange-50 rounded-[2rem] shadow-xl border border-orange-200/30 p-1.5">
                   <div className="bg-white rounded-xl overflow-hidden h-full">
-                    {/* Status Bar */}
                     <div className="bg-gradient-to-r from-black to-orange-600 px-3 py-2 flex justify-between items-center text-white text-xs">
                       <div>9:41</div>
                       <div className="flex space-x-1">
@@ -207,7 +197,6 @@ export default function Index() {
                     </div>
 
                     <div className="p-4 space-y-4">
-                      {/* App Header */}
                       <div className="flex items-center justify-between">
                         <div className="w-6 h-6 bg-gradient-to-br from-black to-orange-500 rounded-xl flex items-center justify-center text-white text-xs font-bold">
                           D
@@ -218,7 +207,6 @@ export default function Index() {
                         <div className="w-6 h-6 bg-orange-100 rounded-full border border-orange-200"></div>
                       </div>
 
-                      {/* Transactions */}
                       <div className="space-y-3">
                         {[
                           {
@@ -261,7 +249,6 @@ export default function Index() {
                         ))}
                       </div>
 
-                      {/* Bottom CTA */}
                       <div className="bg-gradient-to-r from-black to-orange-500 rounded-lg p-3 text-center cursor-pointer animate-bounce-gentle hover:scale-105 transition-transform duration-300">
                         <div className="text-white text-sm font-semibold">
                           Send Reminder
@@ -276,7 +263,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Pain Points Section */}
       <section
         id="pain-points"
         className="py-16 lg:py-32 px-4 sm:px-6 lg:px-8 relative"
@@ -300,7 +286,6 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {/* Card 1 */}
             <div className="group bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-orange-200/30 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-slide-up">
               <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl lg:rounded-3xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 <Car className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
@@ -320,7 +305,6 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div
               className="group bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-orange-200/30 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-slide-up"
               style={{ animationDelay: "0.2s" }}
@@ -343,7 +327,6 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Card 3 */}
             <div
               className="group bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-orange-200/30 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl md:col-span-2 lg:col-span-1 animate-slide-up"
               style={{ animationDelay: "0.4s" }}
@@ -369,7 +352,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section
         id="how-it-works"
         className="py-16 lg:py-32 px-4 sm:px-6 lg:px-8 relative"
@@ -378,7 +360,7 @@ export default function Index() {
           <div className="text-center mb-12 lg:mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full border border-orange-200 backdrop-blur-sm mb-4 lg:mb-6 animate-slide-up">
               <span className="text-sm sm:text-base font-medium text-orange-700">
-                Simple as 1, 2, 3 
+                Simple as 1, 2, 3
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 lg:mb-6">
@@ -391,7 +373,6 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-16">
-            {/* Step 1 */}
             <div className="text-center group animate-slide-up">
               <div className="relative mb-6 lg:mb-8">
                 <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-black to-orange-500 rounded-2xl lg:rounded-3xl flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-300">
@@ -410,7 +391,6 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Step 2 */}
             <div
               className="text-center group animate-slide-up"
               style={{ animationDelay: "0.2s" }}
@@ -432,7 +412,6 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Step 3 */}
             <div
               className="text-center group animate-slide-up"
               style={{ animationDelay: "0.4s" }}
@@ -457,19 +436,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Feature Highlights */}
       <section
         id="features"
         className="py-16 lg:py-32 bg-gradient-to-br from-orange-50 to-white px-4 sm:px-6 lg:px-8"
       >
         <div className="container mx-auto">
           <div className="text-center mb-12 lg:mb-16">
-            {/* <div className="inline-flex items-center px-4 py-2 bg-white rounded-full border border-orange-200 backdrop-blur-sm mb-4 lg:mb-6 animate-slide-up">
-              <Shield className="w-4 h-4 text-orange-500 mr-2" />
-              <span className="text-sm sm:text-base font-medium text-orange-700">
-                Built for modern Nigerians 🇳🇬
-              </span>
-            </div> */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 lg:mb-6">
               Everything you need
             </h2>
@@ -531,7 +503,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section
         id="waitlist"
         className="py-16 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
@@ -547,7 +518,7 @@ export default function Index() {
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 lg:mb-6">
               Join the Waitlist to <span className="text-gradient">Divyd</span>{" "}
-              your money 
+              your money
             </h2>
 
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 lg:mb-12 max-w-2xl mx-auto">
@@ -555,7 +526,6 @@ export default function Index() {
               management. Early users get premium features free for life.
             </p>
 
-            {/* Enhanced Waitlist Form */}
             <div className="max-w-3xl mx-auto relative mb-8 lg:mb-12 animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-200/20 via-orange-100/10 to-orange-200/20 blur-3xl rounded-3xl"></div>
 
@@ -603,11 +573,9 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gradient-to-r from-black to-orange-900 text-white py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            {/* Logo */}
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-lg lg:text-xl">
@@ -619,7 +587,6 @@ export default function Index() {
               </span>
             </div>
 
-            {/* Links */}
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8">
               <a
                 href="/terms"
@@ -641,7 +608,6 @@ export default function Index() {
               </a>
             </div>
 
-            {/* Social Links */}
             <div className="flex items-center space-x-4">
               <a
                 target="_blank"
@@ -692,7 +658,6 @@ export default function Index() {
         </div>
       </footer>
 
-      {/* Floating CTA Button */}
       {isVisible && (
         <div className="fixed bottom-6 right-6 z-50 animate-scale-in">
           <button
