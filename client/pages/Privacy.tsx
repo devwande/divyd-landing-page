@@ -1,5 +1,6 @@
 import { ArrowLeft, Lock, Eye, Shield, Database } from "lucide-react";
 import { Link } from "react-router-dom";
+import DivydLogo from "../../public/logo.svg"
 
 export default function Privacy() {
   return (
@@ -9,8 +10,8 @@ export default function Privacy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">S</span>
+            <div className=" flex items-center justify-center animate-pulse-gentle">
+                  <img src={DivydLogo} alt="Divyd" className="w-8 h-8" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-success bg-clip-text text-transparent">
                 Divyd
@@ -157,15 +158,15 @@ export default function Privacy() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <a
-                  href="mailto:privacy@Divydapp.ng"
+                  href="mailto:info@divydapp.ng"
                   className="text-primary hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"
                 >
                   <Lock className="w-4 h-4" />
-                  <span>privacy@Divydapp.ng</span>
+                  <span>info@Divydapp.ng</span>
                 </a>
                 <span className="text-muted-foreground hidden sm:block">•</span>
                 <a
-                  href="mailto:dpo@Divydapp.ng"
+                  href="mailto:info@divydapp.ng"
                   className="text-primary hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"
                 >
                   <Shield className="w-4 h-4" />

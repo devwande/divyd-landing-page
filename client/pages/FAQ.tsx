@@ -7,6 +7,7 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
+import DivydLogo from "../../public/logo.svg"
 import { useNavigate } from "react-router-dom";
 
 interface FAQItem {
@@ -66,10 +67,8 @@ export default function FAQ() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-black to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg sm:text-xl">
-                  D
-                </span>
+            <div className=" flex items-center justify-center animate-pulse-gentle">
+                  <img src={DivydLogo} alt="Divyd" className="w-8 h-8" />
               </div>
               <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-black to-orange-500 bg-clip-text text-transparent">
                 Divyd
